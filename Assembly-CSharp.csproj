@@ -47,10 +47,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
+     <Compile Include="Assets\Planet.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\BallSpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Follow.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\QuarterView 3D Action BE5\Sprites" />
+     <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\QuarterView 3D Action BE5\Demo\Demo" />
      <Folder Include="Assets\QuarterView 3D Action BE5\Particles" />
      <Folder Include="Assets\QuarterView 3D Action BE5\ReadMe" />
