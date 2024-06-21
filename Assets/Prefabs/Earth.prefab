@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5554523762645045898}
   - component: {fileID: 3270740917592321431}
   - component: {fileID: 1979500363788794020}
-  - component: {fileID: 2247304631623054640}
+  - component: {fileID: 5386673683499076977}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -106,7 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2247304631623054640
+--- !u!54 &5386673683499076977
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
