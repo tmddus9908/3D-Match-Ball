@@ -9,8 +9,8 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "c11c0c09-dc29-4ea1-8d00-d480517ffad7",
-                    "expectedControlType": "Vector2",
-                    "processors": "NormalizeVector2",
+                    "expectedControlType": "Vector3",
+                    "processors": "NormalizeVector3",
                     "interactions": "Press",
                     "initialStateCheck": true
                 },

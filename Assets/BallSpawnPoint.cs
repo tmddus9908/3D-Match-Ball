@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,52 +7,68 @@ public class BallSpawnPoint : Singleton<BallSpawnPoint>
     public Camera upCamera;
     public float speed;
     
+    private float _hAxis;
+    private float _vAxis;
+    private bool _isFalling;
     
     private GameObject _instantiated;
-    private Vector3 _cameraPosition;
-    private Vector2 _inputVector2;
+    
+    private Vector3 _priorPosition;
+    private Vector3 _planetPosition;
+    
+    private Rigidbody _planetRigidbody;
     private Rigidbody _rigidbody;
     private void Start()
     {
-        _instantiated = Instantiate(balls[0].gameObject, transform.position, Quaternion.identity);
-        _instantiated.GetComponent<Rigidbody>().useGravity = false;
-        _cameraPosition = upCamera.transform.position;
-
+        InstantiatePlanet();
         _rigidbody = GetComponent<Rigidbody>();
+        _priorPosition = transform.position;
     }
 
     private void Update()
     {
+        GetInput();
         DropPlanet();
     }
 
     private void FixedUpdate()
     {
-        MoveSpawnPoint();
+        if(_isFalling == false)
+            MovePlanet();
     }
-
-    public void SetCameraPosition()
+  
+    public void InstantiatePlanet()
     {
-        upCamera.transform.position = _cameraPosition;
+        _instantiated = Instantiate(balls[0].gameObject, transform.position, Quaternion.identity);
+        _planetRigidbody = _instantiated.GetComponent<Rigidbody>();
+        _planetRigidbody.useGravity = false;
+        _isFalling = false;
+    }
+    public void ReturnSpawnerPosition()
+    {
+        transform.position = _priorPosition;
     }
 
     private void DropPlanet()
     {
-        if(Input.GetKey(KeyCode.Space) && _instantiated.GetComponent<Rigidbody>().useGravity == false)
+        if(Input.GetKey(KeyCode.Space) && _planetRigidbody.useGravity == false)
         {
-            _instantiated.GetComponent<Rigidbody>().useGravity = true;
+           _planetRigidbody.useGravity = true;
+           _isFalling = true;
         }
     }
-
-    private void MoveSpawnPoint()
+    private void GetInput()
     {
-        Vector3 move = _inputVector2 * speed * Time.deltaTime;
-        _rigidbody.MovePosition(_rigidbody.position + move);
+        _hAxis = Input.GetAxisRaw("Horizontal");
+        _vAxis = Input.GetAxisRaw("Vertical");
     }
-
-    void OnMove(InputValue value)
+    private void MovePlanet()
     {
-        Debug.Log("눌림");
-        _inputVector2 = value.Get<Vector2>();
+        _planetPosition = new Vector3(_hAxis, 0, _vAxis).normalized;
+        Vector3 move = _planetPosition * speed * Time.deltaTime;
+        
+        transform.position += _planetPosition * speed * Time.deltaTime;
+        _planetRigidbody.MovePosition(_planetRigidbody.position + move);
+        _rigidbody.MovePosition(_rigidbody.position + move);
     }
 }

@@ -12,7 +12,8 @@ public class Planet : MonoBehaviour
         if (other != null && _isCrash == false)
         {
             _isCrash = true;
-            BallSpawnPoint.Instance.SetCameraPosition();
+            BallSpawnPoint.Instance.ReturnSpawnerPosition();
+            BallSpawnPoint.Instance.InstantiatePlanet();
         }
     }
 }
