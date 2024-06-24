@@ -46,30 +46,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Singleton.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
-     <Compile Include="Assets\Planet.cs" />
-     <Compile Include="Assets\Scripts\Item.cs" />
-     <Compile Include="Assets\BallSpawnPoint.cs" />
-     <Compile Include="Assets\Scripts\Follow.cs" />
+     <Compile Include="Assets\Scripts\Planet.cs" />
+     <Compile Include="Assets\Scripts\BallSpawnPoint.cs" />
      <Folder Include="Assets" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Sprites" />
      <Folder Include="Assets\Prefabs" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Demo\Demo" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Particles" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\ReadMe" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Materials" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Textures" />
-     <Folder Include="Assets\Animation" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Models" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\ReadMe\Scripts" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Demo" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Scripts" />
-     <Folder Include="Assets\QuarterView 3D Action BE5\Prefabs" />
-     <Folder Include="Assets\Scenes\SampleScene" />
      <Folder Include="Assets\Materials" />
-     <Folder Include="Assets\QuarterView 3D Action BE5" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\Unity 2022.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
