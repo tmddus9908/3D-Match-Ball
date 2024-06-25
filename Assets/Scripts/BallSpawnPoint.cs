@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class BallSpawnPoint : Singleton<BallSpawnPoint>
 {
-    public GameObject[] balls;
+    public GameObject ball;
+    public Material[] materials;
     public Camera upCamera;
     public float speed;
     
@@ -39,7 +39,12 @@ public class BallSpawnPoint : Singleton<BallSpawnPoint>
   
     public void InstantiatePlanet()
     {
-        _instantiated = Instantiate(balls[0].gameObject, transform.position, Quaternion.identity);
+        int ran = Random.Range(0, 3);
+        _instantiated = Instantiate(ball.gameObject, transform.position, Quaternion.identity);
+        _instantiated.GetComponent<Planet>().level = ran;
+        _instantiated.GetComponent<Planet>().mesh.material = materials[ran];
+        _instantiated.transform.localScale = new Vector3(5 + 2 * ran, 5 + 2 * ran, 5 + 2 * ran);
+        
         _planetRigidbody = _instantiated.GetComponent<Rigidbody>();
         _planetRigidbody.useGravity = false;
         _isFalling = false;

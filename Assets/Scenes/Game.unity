@@ -658,15 +658,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b0bff7be331fb4f882e7dc5d0f64f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balls:
-  - {fileID: 4936059586642469689, guid: f8f9cdebb7d94f145b66345fdae0d865, type: 3}
-  - {fileID: 7114461703498859763, guid: 2fde51b6faf3f724a81a3ede54510306, type: 3}
-  - {fileID: 5485771491781997777, guid: 56d27a5b9d1f06446ba8466970e12382, type: 3}
-  - {fileID: 9121944447127553945, guid: b310b304d66e32f45997e9512509f7a5, type: 3}
-  - {fileID: 7101138534628079849, guid: bf41da4e350f3db44862437bc152af48, type: 3}
-  - {fileID: 6420064125081168220, guid: e232704d94e2ed24cbeeec1c588cbce0, type: 3}
-  - {fileID: 3093169315042290910, guid: c276937bf42db684a8d06cfb11554e65, type: 3}
-  - {fileID: 7703496511551416368, guid: fcd5b9ec513c1b7439f97c97bdcc4031, type: 3}
+  ball: {fileID: 4936059586642469689, guid: f8f9cdebb7d94f145b66345fdae0d865, type: 3}
+  materials:
+  - {fileID: 2100000, guid: b8688fcab1af8884ba242426c93e15b5, type: 2}
+  - {fileID: 2100000, guid: 704d55e68a7d6ff419ac068e8372740c, type: 2}
+  - {fileID: 2100000, guid: 6f666cb14225ae84d9daad1e417c18c0, type: 2}
+  - {fileID: 2100000, guid: 6a6aeafa9e94d69449eb2cfa2afd6769, type: 2}
+  - {fileID: 2100000, guid: a03774e6e66ff6f4c9718b76ad7787b7, type: 2}
+  - {fileID: 2100000, guid: c8d7f14958e62374699ee733cdd4f378, type: 2}
+  - {fileID: 2100000, guid: 18a5c2946d127dc43b4a519b5af1202f, type: 2}
+  - {fileID: 2100000, guid: 7cec897730359cf4680089760279a250, type: 2}
   upCamera: {fileID: 1715525108}
   speed: 20
 --- !u!1 &1494968566
